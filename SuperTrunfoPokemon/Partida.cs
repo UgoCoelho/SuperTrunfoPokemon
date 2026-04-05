@@ -78,7 +78,7 @@ namespace SuperTrunfoPokemon
 
         public void ResolverRodada(Cartas c1, Cartas c2, int v1, int v2) 
         {
-            // Super Trunfo
+            // Super Trunfo 
             if (c1.IsSuperTrunfo || c2.IsSuperTrunfo)
             {
                 // c1 é Arceus
