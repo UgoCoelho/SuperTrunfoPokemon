@@ -76,7 +76,7 @@ namespace SuperTrunfoPokemon
             return int.Parse(Console.ReadLine());
         }
 
-        public void ResolverRodada(Cartas c1, Cartas c2, int v1, int v2)
+        public void ResolverRodada(Cartas c1, Cartas c2, int v1, int v2) 
         {
             // Super Trunfo
             if (c1.IsSuperTrunfo || c2.IsSuperTrunfo)
