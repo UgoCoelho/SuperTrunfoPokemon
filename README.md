@@ -15,8 +15,8 @@ A cada rodada, um atributo é escolhido e comparado. O jogador com o maior valor
 ## 🎮 Funcionalidades
 
 ✔ Criação de baralho com Pokémon
-✔ Embaralhamento das cartas (Fisher-Yates)
-✔ Distribuição automática entre jogadores
+\n✔ Embaralhamento das cartas (Fisher-Yates)
+\n✔ Distribuição automática entre jogadores
 ✔ Sistema de rodadas
 ✔ Escolha de atributos pelo jogador
 ✔ Comparação de cartas
