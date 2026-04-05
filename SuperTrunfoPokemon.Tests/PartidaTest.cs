@@ -65,5 +65,46 @@ namespace SuperTrunfoPokemon.Tests
             Assert.AreEqual(1, jogador1.Baralho.Count);
             Assert.AreEqual(1, jogador2.Baralho.Count);
         }
+
+        [TestMethod]
+        public void ResolverRodada_GrupoAComValorMaior_DeveVencerArceus()
+        {
+            var partida = new Partida("Player", "CPU");
+            var jogador1 = ObterJogador(partida, "jogador1");
+            var jogador2 = ObterJogador(partida, "jogador2");
+
+            var arceus = new Cartas { Nome = "Arceus", IsSuperTrunfo = true };
+            var cartaForte = new Cartas { Nome = "Garchomp", Grupo = "A" };
+
+            partida.ResolverRodada(arceus, cartaForte, 100, 130);
+
+            Assert.AreEqual(0, jogador1.Baralho.Count);
+            Assert.AreEqual(2, jogador2.Baralho.Count);
+        }
+
+        [TestMethod]
+        public void ResolverRodada_ArceusContraGrupoNaoA_SempreVencer()
+        {
+            var partida = new Partida("Player", "CPU");
+            var jogador1 = ObterJogador(partida, "jogador1");
+            var jogador2 = ObterJogador(partida, "jogador2");
+
+            var arceus = new Cartas
+            {
+                Nome = "Arceus",
+                IsSuperTrunfo = true
+            };
+
+            var cartaFraca = new Cartas
+            {
+                Nome = "Lucario",
+                Grupo = "C"
+            };
+
+            partida.ResolverRodada(arceus, cartaFraca, 100, 130);
+
+            Assert.AreEqual(2, jogador1.Baralho.Count);
+            Assert.AreEqual(0, jogador2.Baralho.Count);
+        }
     }
 }
